@@ -12,11 +12,11 @@ after_success:
     - coveralls
 branches:
   except:
-    - /release_\d+/
-    - release
+    - /test_release_\d+/
+    - test_release
 deploy:
   # Create a release tag for successful master builds
   - provider: script
     script: bash bin/travis-push.sh
     on:
-      branch: master
+      branch: fix-tagging
