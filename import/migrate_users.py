@@ -35,7 +35,9 @@ def process():
                   ckan_users_in_organisations[user['name']] = 1
 
     with gzip.open(args.ckan_users_fpath, 'rb') as ckan_users_f, \
+            gzip.open(args.output_fpath_discarded, 'wb') as output_f_discarded, \
             gzip.open(args.output_fpath, 'wb') as output_f:
+
 
         # migrate ckan users
         drupal_ids_written = set()
@@ -53,6 +55,8 @@ def process():
                     stats.add('Migrated pure CKAN user', user['name'])
             else:
                 stats.add('CKAN user not found in organisation', user['name'])
+                if 'email' in user and user['email'] is not None:
+                    output_f_discarded.write(user['email'] + '\n')
 
         # migrate drupal-only users
         drupal_only_users = sorted(list(
@@ -149,6 +153,8 @@ if __name__ == '__main__':
                         help='Specify the location of the Drupal users table csv.gz file')
     parser.add_argument('output_fpath',
                         help='Specify the location of the user output file')
+    parser.add_argument('output_fpath_discarded',
+                        help='Specify the location of the discarded user output file')
     parser.add_argument('ckan_organisation_fpath',
                         help='Specify the location of the organisation file')
     parser.add_argument('output_organisation_fpath',
