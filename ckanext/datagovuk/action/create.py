@@ -65,6 +65,8 @@ def resource_create(context, data_dict):
 
             errors, warnings, senior_csv, junior_csv = create_organogram_csvs(file_handle)
 
+            # table = Table('path.csv', schema='schema.json')
+
             if errors:
                 context['session'].rollback()
                 raise ValidationError(errors)
@@ -75,6 +77,52 @@ def resource_create(context, data_dict):
 
                 senior_resource = _create_csv_resource('Senior', senior_csv, data_dict.copy(), context, timestamp_str)
                 junior_resource = _create_csv_resource('Junior', junior_csv, data_dict.copy(), context, timestamp_str)
+
+                print('dgu resource_create', senior_resource)
+
+                resource = senior_resource
+
+                print('dgu resource_create resource', resource)
+                # if isinstance(resource.get('upload', None), cgi.FieldStorage):
+                #     print('resource_create body start', body)
+                #     log.info("File is being uploaded")
+                #     resource['upload'].file.seek(0)
+                #     body = resource['upload'].file
+                #     print('resource_create body', body)
+                # # If resource.get('url_type') == 'upload' then the resource is in CKAN file system
+                # elif resource.get('url_type') == 'upload':
+                #     print('in ckan')
+
+                try:
+                    import os
+                    import requests
+                    # Start session to download files
+                    session = requests.Session()
+                    log.info("Attempting to obtain resource %s from url %s" % (resource.get('name',''), resource.get('url', '')))
+                    response = session.get(
+                        resource.get('url', ''), timeout=30)
+                    # If the response status code is not 200 (i.e. success), raise Exception
+                    if response.status_code != 200:
+                        log.error("Error obtaining resource from the given URL. Response status code is %d" % response.status_code)
+                        # raise Exception("Error obtaining resource from the given URL. Response status code is %d" % response.status_code)
+                    # body = response.content
+                    log.info("Successfully obtained resource %s from url %s" % (resource.get('name',''), resource.get('url', '')))
+                    # print(body)
+
+                    from tableschema import Table
+                    d = os.path.abspath(os.path.join(os.path.dirname(__file__), "../data"))
+                    full_path = os.path.join(d, "senior_csv_schema.json")
+                    print(full_path)
+                    table = Table(resource.get('url', ''), schema=full_path)
+                    print(table.schema.descriptor)
+                    print('schema:', table.schema.valid)
+
+                    # table.read(keyed=True)
+
+                except requests.exceptions.RequestException:
+                    print('not found')
+
+                # from ckanext.datagovuk.schemas.
 
                 return senior_resource
 
@@ -95,7 +143,12 @@ def _create_csv_resource(junior_senior, csv, resource_data, context, timestamp):
     resource_data['upload'] = csv_wrapper
     resource_data['timestamp'] = timestamp
 
-    return resource_create_core(context, resource_data)
+    res = resource_create_core(context, resource_data)
+
+    print('_create_csv_resource', resource_data)
+    print('_create_csv_resource csv_wrapper', csv_wrapper)
+
+    return res
 
 
 def user_create(context, data_dict):

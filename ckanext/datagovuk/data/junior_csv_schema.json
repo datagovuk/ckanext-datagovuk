@@ -1,0 +1,103 @@
+{
+    "title": "UK Government Organagram - Junior Staff",
+    "fields": [
+        {
+            "name": "Parent Department",
+            "description": "Name of the central government department that oversees the organisation (or if the organisation is a department, just name it again here).",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "Organisation",
+            "description": "The department or agency for whom the role(s) is for. Not abbreviated.",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "Unit",
+            "description": "Where the organisation's staff are split into functional units (or teams/sections etc), give the name of the unit.",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "Reporting Senior Post",
+            "description": "The 'post unique reference' of the post in the Senior Staff that this one reports to (directly or indirectly). Cannot be blank.",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "Grade",
+            "description": "Grade of role.",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "Payscale Minimum (£)",
+            "description": "Lowest annual pay for this grade, according to the payscale.",
+            "constraints": {
+                "required": true,
+                "type": "http://www.w3.org/2001/XMLSchema#int"
+            }
+        },
+        {
+            "name": "Payscale Maximum (£)",
+            "description": "Highest annual pay for this grade, according to the payscale.",
+            "constraints": {
+                "required": true,
+                "type": "http://www.w3.org/2001/XMLSchema#int"
+            }
+        },
+        {
+            "name": "Generic Job Title",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "Number of Posts in FTE",
+            "description": "Number of Full Time Equivalents in this role. If this is one full time post then put '1'. Part time roles are a decimal fraction with 2 decimal places.",
+            "constraints": {
+                "required": true,
+                "type": "http://www.w3.org/2001/XMLSchema#float"
+            }
+        },
+        {
+            "name": "Professional/Occupational Group",
+            "description": "The professional/occupational group relates to the post and not the person. Select the professional/occupational group that best describes the teams' function. This list has been taken from the professional skills for government and at present there are no plans to amend/add to the list. The titles are very generic and should cover the scope of roles within government.",
+            "constraints": {
+                "required": true,
+                "enum": [
+                    "Communications",
+                    "Economics",
+                    "Finance",
+                    "Human Resources",
+                    "Information Technology",
+                    "Internal Audit",
+                    "Knowledge and Information Management (KIM)",
+                    "Law",
+                    "Medicine",
+                    "Military",
+                    "Operational Delivery",
+                    "Operational Research",
+                    "Other",
+                    "Planning",
+                    "Policy",
+                    "Procurement",
+                    "Programme and Project Management (PPM)",
+                    "Property and asset management",
+                    "Psychology",
+                    "Science and Engineering",
+                    "Social Research",
+                    "Statisticians",
+                    "Tax Professionals",
+                    "Vets"
+                ]
+            }
+        }
+    ]
+}

@@ -1,6 +1,8 @@
 gunicorn
+jsonschema==2.6.0
 lxml>=2.3
 numpy==1.15.4
 pandas==0.23.4
 Shapely>=1.2.13
 xlrd==1.1.0
+tableschema

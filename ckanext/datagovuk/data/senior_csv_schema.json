@@ -1,0 +1,162 @@
+{
+    "title": "UK Government Organogram - Senior Staff",
+    "fields": [
+        {
+            "name": "Post Unique Reference",
+            "description": "Unique id for a post. Individuals who are paid but are not in a post (e.g. gardening leave) must have Post Unique Reference 0 (zero). Must be unique in the organization, unless it is '0' or the line is duplicate save for name, contact phone/email and notes, meaning it is a job share. A post that remains from release to release should keep its value the same too. Allowed characters: '0-9A-Za-z-'. Cannot be 'XX'.",
+            "constraints": {
+                "required": true,
+                "unique": true
+            }
+        },
+        {
+            "name": "Name",
+            "description": "Name of person in role, or 'N/D' if the role is not disclosed (Grade is SCS1), or 'Vacant' if not currently filled, or 'Eliminated' if the role was reported in the last period but no longer exists. Must not be 'N/D' if the pay is a number, unless the person is on long term paid leave. Cannot be blank.",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "Grade (or equivalent)",
+            "description": "Grade of role. Grades for senior civil servants are overseen by the Cabinet Office centrally. Valid values: SCS4, SCS3, SCS2, SCS1A, SCS1, OF-9, OF-8, OF-7, OF-6. Note: the first round of CSVs in 2011 this column was titled just \"Grade\".",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "Job Title",
+            "description": "Cannot be blank or 'N/D'. Where Post Unique Reference is '0' write 'Not in post'. When on long term leave write 'Not in post'.",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "Job/Team Function",
+            "description": "Free text. Maximum 100 words. If the post reference is '0', write 'N/A'. Cannot be left blank.",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "Parent Department",
+            "description": "Name of the central government department that oversees or sponsors or funds the organisation (or if the organisation is a department, just name it again here).",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "Organisation",
+            "description": "The department or agency for whom the role is for. Non-abbreviated. 'N/A' only allowed when the Post Unique Reference is 0. Cannot be 'N/D'.",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "Unit",
+            "description": "Where the organisation's staff are split into functional units (or teams/sections etc), give the name of the unit. When the individual is on long term paid leave, write 'N/A'.",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "name": "Contact Phone",
+            "description": "Can be the individual or team's details (the latter if the name is not disclosed). If Post Unique Reference is 0 or the post is vacant or eliminated or the individual is on long term paid leave, put 'N/A'.",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "Contact E-mail",
+            "description": "Can be the individual or team's details (the latter if the name is not disclosed). If Post Unique Reference is 0 or the post is vacant or eliminated or the individual is on long term paid leave, put 'N/A'.",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "Reports to Senior Post",
+            "constraints": {
+                "required": true,
+                "description": "The 'Post Unique Reference' of the post that this one reports to. The most senior post should put 'XX'. 'XX' should appear exactly once on the spreadsheet. Cannot be left blank. When the individual is on long term paid leave they may be shown reporting to the HR Director or Permanent Secretary."
+            }
+        },
+        {
+            "name": "Salary Cost of Reports (£)",
+            "description": "An accumulative total cost of SCS 1 staff and below that report to this post. Staff costs should only be included in one group, i.e. this is not a cumulative total as you go up the hierarchy. Should be a positive or zero number. Cannot be left blank - if none write 0. Can be undisclosed 'N/D' if post has a team of five people or fewer - in this case, see an accompanying note in the 'Notes' column to identify which unique post reference it has been reported under instead, which should be another post in the group, or a more senior post.",
+            "constraints": {
+                "required": true,
+                "type": "http://www.w3.org/2001/XMLSchema#int"
+            }
+        },
+        {
+            "name": "FTE",
+            "description": "Full Time Equivalent. If this is a full time role then put '1'. Otherwise put a decimal fraction with 2 decimal places.",
+            "constraints": {
+                "required": true,
+                "type": "http://www.w3.org/2001/XMLSchema#float"
+            }
+        },
+        {
+            "name": "Actual Pay Floor (£)",
+            "description": "The annual pay, rounded down to the nearest multiple of £5,000. Only for posts of grade SCS2 and above. If SCS1 post write 'N/A' (this might be changed to N/D in future as that would make more sense). If the post is vacant, write '0'. Cannot be left blank - if none write 0.",
+            "constraints": {
+                "required": true,
+                "type": "http://www.w3.org/2001/XMLSchema#int"
+            }
+        },
+        {
+            "name": "Actual Pay Ceiling (£)",
+            "description": "The annual pay, rounded up to the nearest multiple of £5,000 minus 1. Or if the Actual Pay Floor is 0 or non-numerical, put here the same value.",
+            "constraints": {
+                "required": true,
+                "type": "http://www.w3.org/2001/XMLSchema#int"
+            }
+        },
+        {
+            "name": "Professional/Occupational Group",
+            "description": "The professional/occupational group relates to the post and not the person. Select the professional/occupational group that best describes the teams' function. This list has been taken from the professional skills for government and at present there are no plans to amend/add to the list. The titles are very generic and should cover the scope of roles within government.",
+            "constraints": {
+                "required": true,
+                "enum": [
+                    "Communications",
+                    "Economics",
+                    "Finance",
+                    "Human Resources",
+                    "Information Technology",
+                    "Internal Audit",
+                    "Knowledge and Information Management (KIM)",
+                    "Law",
+                    "Medicine",
+                    "Military",
+                    "Operational Delivery",
+                    "Operational Research",
+                    "Other",
+                    "Planning",
+                    "Policy",
+                    "Procurement",
+                    "Programme and Project Management (PPM)",
+                    "Property and asset management",
+                    "Psychology",
+                    "Science and Engineering",
+                    "Social Research",
+                    "Statisticians",
+                    "Tax Professionals",
+                    "Vets"
+                ]
+            }
+        },
+        {
+            "name": "Notes",
+            "description": "Free text. Can be left blank. If the post is vacant, write 'the post became vacant on dd/mm/yy', inserting the correct date.",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "name": "Valid?",
+            "description": "This is merely a hangover from the source spreadsheet's validation column. Blank and meaningless.",
+            "constraints": {
+                "required": false
+            }
+        }
+    ]
+}
