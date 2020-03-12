@@ -2,7 +2,7 @@
 
 pip=${1-'/usr/bin/env pip'}
 
-ckan_harvest_sha='7b251f0e3b26e9567025b833228676b8801979d0'
+ckan_harvest_sha='713a0fb04ff790d847824df427fa40a3f91bbc7c'
 
 ckan_dcat_sha='b757e5be643a17f08b1bb102348c370abee149d5'
 
