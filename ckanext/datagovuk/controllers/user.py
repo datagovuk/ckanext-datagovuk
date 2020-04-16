@@ -28,14 +28,15 @@ class UserController(UserController):
         from ckanext.datagovuk.schema import user_edit_form_schema
         return user_edit_form_schema()
 
-    # intention: redirect users to dashboard_datasets instead of dashboard
-    # not covered by tests
-    def me(self, locale=None):
-        if not c.user:
-            h.redirect_to(locale=locale, controller='user', action='login',
-                          id=None)
-        user_ref = c.userobj.get_reference_preferred_for_uri()
-        h.redirect_to(locale=locale, controller='user', action='dashboard_datasets')
+    # def me(self, locale=None):
+    #     if not c.user:
+    #         h.redirect_to(locale=locale, controller='user', action='login',
+    #                       id=None)
+    #     user_ref = c.userobj.get_reference_preferred_for_uri()
+    #     h.redirect_to(locale=locale, controller='user', action='dashboard_datasets')
+
+    ## use new config settings
+    # ckan.route_after_login = dashboard.datasets
 
     # intention: 8 character limit instead of 4
     # not covered by tests
@@ -108,8 +109,3 @@ class UserController(UserController):
                     h.flash_error(_('Could not send reset link: %s') %
                                   unicode(e))
         return render('user/request_reset.html')
-
-    def new(self, data=None, errors=None, error_summary=None):
-        if request.method == 'POST':
-            abort(403, _('Unauthorized to create a user')) 
-        return super(UserController, self).new(data=data, errors=errors, error_summary=error_summary)

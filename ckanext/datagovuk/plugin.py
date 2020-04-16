@@ -242,7 +242,16 @@ class DatagovukPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, Defau
     # IRoutes
 
     def before_map(self, route_map):
+        # user_controller = 'ckanext.datagovuk.controllers.user:UserController'
+        healthcheck_controller = 'ckanext.datagovuk.controllers.healthcheck:HealthcheckController'
         api_search_dataset_controller = 'ckanext.datagovuk.controllers.api:DGUApiController'
+        # with SubMapper(route_map, controller=user_controller) as m:
+        #     m.connect('register', '/user/register', action='register')
+        #     m.connect('/user/logged_in', action='logged_in')
+        #     m.connect('/user/edit', action='edit')
+        #     m.connect('/user/edit/{id:.*}', action='edit')
+        #     m.connect('/user/reset', action='request_reset')
+        route_map.connect('healthcheck', '/healthcheck', controller=healthcheck_controller, action='healthcheck')
         route_map.connect('/api/search/dataset', controller=api_search_dataset_controller, action='api_search_dataset')
         route_map.connect('/api/3/search/dataset', controller=api_search_dataset_controller, action='api_search_dataset')
         route_map.redirect('/home', '/')
