@@ -15,8 +15,6 @@ from ckan.model import User
 
 from ckanext.datagovuk.pii_helpers import remove_pii, remove_pii_from_list
 
-from ckanext.datagovuk.pii_helpers import remove_pii, remove_pii_from_list
-
 log = __import__('logging').getLogger(__name__)
 
 
