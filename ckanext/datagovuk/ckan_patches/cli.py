@@ -1,10 +1,10 @@
-import ckan.lib.cli
+from ckan.lib import cli
 
 from ckanext.datagovuk.lib.mailer import send_password_alert
 
 
 def set_password(self):
-    ckan.cli.user.original_set_password(self)
+    cli.user.original_set_password(self)
 
     if len(self.args) > 1:
         import ckan.model as model
@@ -14,5 +14,5 @@ def set_password(self):
         send_password_alert(user)
 
 
-ckan.cli.user.original_set_password = ckan.cli.user.set_password
-ckan.cli.user.set_password = set_password
+cli.user.original_set_password = cli.user.set_password
+cli.user.set_password = set_password
