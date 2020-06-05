@@ -1312,7 +1312,7 @@ msgid ""
 "User \"%s\" is now registered but you are still logged in as \"%s\" from "
 "before"
 msgstr ""
-"User \"%s\" is now registered but you are still logged in as \"%s\" from "
+"User \"%s\" is now registered but you are still signed in as \"%s\" from "
 "before"
 
 #: ckan/controllers/user.py:294 ckan/views/user.py:174
@@ -2030,7 +2030,7 @@ msgstr "Error sending the invite email, the user was not created: {0}"
 
 #: ckan/logic/action/create.py:1254 ckan/logic/action/create.py:1261
 msgid "You must be logged in to follow users"
-msgstr "You must be logged in to follow users"
+msgstr "You must be signed in to follow users"
 
 #: ckan/logic/action/create.py:1274
 msgid "You cannot follow yourself"
@@ -2043,7 +2043,7 @@ msgstr "You are already following {0}"
 
 #: ckan/logic/action/create.py:1313 ckan/logic/action/create.py:1321
 msgid "You must be logged in to follow a dataset."
-msgstr "You must be logged in to follow a dataset."
+msgstr "You must be signed in to follow a dataset."
 
 #: ckan/logic/action/create.py:1379
 msgid "User {username} does not exist."
@@ -2051,7 +2051,7 @@ msgstr "User {username} does not exist."
 
 #: ckan/logic/action/create.py:1454 ckan/logic/action/create.py:1462
 msgid "You must be logged in to follow a group."
-msgstr "You must be logged in to follow a group."
+msgstr "You must be signed in to follow a group."
 
 #: ckan/logic/action/delete.py:54
 msgid " Delete User: {0}"
@@ -2094,7 +2094,7 @@ msgstr "Could not find tag \"%s\""
 
 #: ckan/logic/action/delete.py:607 ckan/logic/action/delete.py:611
 msgid "You must be logged in to unfollow something."
-msgstr "You must be logged in to unfollow something."
+msgstr "You must be signed in to unfollow something."
 
 #: ckan/logic/action/delete.py:622
 msgid "You are not following {0}."
@@ -2271,7 +2271,7 @@ msgstr "User %s not authorised to read group %s"
 
 #: ckan/logic/auth/get.py:237
 msgid "You must be logged in to access your dashboard."
-msgstr "You must be logged in to access your dashboard."
+msgstr "You must be signed in to access your dashboard."
 
 #: ckan/logic/auth/update.py:39
 #, python-format
@@ -2305,7 +2305,7 @@ msgstr "User %s not authorised to edit permissions of group %s"
 
 #: ckan/logic/auth/update.py:190
 msgid "Have to be logged in to edit user"
-msgstr "Have to be logged in to edit user"
+msgstr "Have to be signed in to edit user"
 
 #: ckan/logic/auth/update.py:198
 #, python-format
@@ -2797,11 +2797,11 @@ msgstr "Settings"
 
 #: ckan/templates/header.html:40 ckan/templates/header.html:42
 msgid "Log out"
-msgstr "Log out"
+msgstr "Sign out"
 
 #: ckan/templates/header.html:52 ckan/templates/user/logout_first.html:14
 msgid "Log in"
-msgstr "Log in"
+msgstr "Sign in"
 
 #: ckan/templates/header.html:54 ckan/templates/user/new.html:3
 msgid "Register"
@@ -4670,15 +4670,15 @@ msgstr "Forgot your password?"
 
 #: ckan/templates/user/logout.html:3 ckan/templates/user/logout.html:9
 msgid "Logged Out"
-msgstr "Logged Out"
+msgstr "Signed Out"
 
 #: ckan/templates/user/logout.html:11
 msgid "You are now logged out."
-msgstr "You are now logged out."
+msgstr "You are now signed out."
 
 #: ckan/templates/user/logout_first.html:9
 msgid "You're already logged in as {user}."
-msgstr "You're already logged in as {user}."
+msgstr "You're already signed in as {user}."
 
 #: ckan/templates/user/logout_first.html:9
 msgid "Logout"
@@ -4691,15 +4691,15 @@ msgstr "Remember me"
 
 #: ckan/templates/user/logout_first.html:20
 msgid "You're already logged in"
-msgstr "You're already logged in"
+msgstr "You're already signed in"
 
 #: ckan/templates/user/logout_first.html:22
 msgid "You need to log out before you can log in with another account."
-msgstr "You need to log out before you can log in with another account."
+msgstr "You need to sign out before you can sign in with another account."
 
 #: ckan/templates/user/logout_first.html:23
 msgid "Log out now"
-msgstr "Log out now"
+msgstr "Sign out now"
 
 #: ckan/templates/user/new.html:6
 msgid "Registration"
