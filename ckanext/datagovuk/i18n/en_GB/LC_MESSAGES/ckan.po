@@ -914,7 +914,7 @@ msgstr "Group not found"
 #: ckan/controllers/feed.py:245 ckan/logic/action/create.py:1373
 #: ckan/views/feed.py:160
 msgid "Organization not found"
-msgstr "Organisation not found"
+msgstr "Publisher not found"
 
 #: ckan/controllers/group.py:130 ckan/controllers/group.py:581
 msgid "Incorrect group type"
@@ -931,7 +931,7 @@ msgstr "Incorrect group type"
 #: ckan/templates/organization/read_base.html:6
 #: ckan/templates/package/base.html:14 ckan/views/home.py:46
 msgid "Organizations"
-msgstr "Organisations"
+msgstr "Publishers"
 
 #: ckan/controllers/group.py:307 ckan/controllers/home.py:62
 #: ckan/controllers/package.py:257 ckan/lib/helpers.py:1037
@@ -1005,7 +1005,7 @@ msgstr "Unauthorised to delete group %s"
 
 #: ckan/controllers/group.py:621
 msgid "Organization has been deleted."
-msgstr "Organisation has been deleted."
+msgstr "Publisher has been deleted."
 
 #: ckan/controllers/group.py:623
 msgid "Group has been deleted."
@@ -1419,7 +1419,7 @@ msgstr "{actor} updated the group {group}"
 
 #: ckan/lib/activity_streams.py:66
 msgid "{actor} updated the organization {organization}"
-msgstr "{actor} updated the organisation {organization}"
+msgstr "{actor} updated the publisher {organization}"
 
 #: ckan/lib/activity_streams.py:69
 msgid "{actor} updated the dataset {dataset}"
@@ -1443,7 +1443,7 @@ msgstr "{actor} deleted the group {group}"
 
 #: ckan/lib/activity_streams.py:84
 msgid "{actor} deleted the organization {organization}"
-msgstr "{actor} deleted the organisation {organization}"
+msgstr "{actor} deleted the publisher {organization}"
 
 #: ckan/lib/activity_streams.py:87
 msgid "{actor} deleted the dataset {dataset}"
@@ -1463,7 +1463,7 @@ msgstr "{actor} created the group {group}"
 
 #: ckan/lib/activity_streams.py:100
 msgid "{actor} created the organization {organization}"
-msgstr "{actor} created the organisation {organization}"
+msgstr "{actor} created the publisher {organization}"
 
 #: ckan/lib/activity_streams.py:103
 msgid "{actor} created the dataset {dataset}"
@@ -1703,7 +1703,7 @@ msgstr "No recipient email address available!"
 
 #: ckan/lib/mailer.py:134 ckan/templates/home/snippets/stats.html:17
 msgid "organization"
-msgstr "organisation"
+msgstr "publisher"
 
 #: ckan/lib/mailer.py:135 ckan/templates/home/snippets/stats.html:23
 msgid "group"
@@ -1756,15 +1756,15 @@ msgstr "Could not parse as valid JSON"
 
 #: ckan/logic/validators.py:35 ckan/logic/validators.py:44
 msgid "An organization must be provided"
-msgstr "An organisation must be provided"
+msgstr "A publisher must be provided"
 
 #: ckan/logic/validators.py:49
 msgid "Organization does not exist"
-msgstr "Organisation does not exist"
+msgstr "Publisher does not exist"
 
 #: ckan/logic/validators.py:54
 msgid "You cannot add a dataset to this organization"
-msgstr "You cannot add a dataset to this organisation"
+msgstr "You cannot add a dataset to this publisher"
 
 #: ckan/logic/validators.py:94
 msgid "Invalid integer"
@@ -1954,7 +1954,7 @@ msgstr "role does not exist."
 
 #: ckan/logic/validators.py:749
 msgid "Datasets with no organization can't be private."
-msgstr "Datasets with no organisation can't be private."
+msgstr "Datasets with no publisher can't be private."
 
 #: ckan/logic/validators.py:755
 msgid "Not a list"
@@ -2005,7 +2005,7 @@ msgstr "REST API: Create member object %s"
 
 #: ckan/logic/action/create.py:807
 msgid "Trying to create an organization as a group"
-msgstr "Trying to create an organisation as a group"
+msgstr "Trying to create a publisher as a group"
 
 #: ckan/logic/action/create.py:896
 msgid "You must supply a package id or name (parameter \"package\")."
@@ -2138,7 +2138,7 @@ msgstr "TaskStatus was not found."
 
 #: ckan/logic/action/update.py:995
 msgid "Organization was not found."
-msgstr "Organisation was not found."
+msgstr "Publisher was not found."
 
 #: ckan/logic/auth/create.py:27 ckan/logic/auth/create.py:45
 #, python-format
@@ -2153,7 +2153,7 @@ msgstr "User %s not authorised to edit these groups"
 #: ckan/logic/auth/create.py:38
 #, python-format
 msgid "User %s not authorized to add dataset to this organization"
-msgstr "User %s not authorised to add dataset to this organisation"
+msgstr "User %s not authorised to add dataset to this publisher"
 
 #: ckan/logic/auth/create.py:61
 msgid "No dataset id provided, cannot check auth."
@@ -2182,7 +2182,7 @@ msgstr "User %s not authorised to create groups"
 #: ckan/logic/auth/create.py:129
 #, python-format
 msgid "User %s not authorized to create organizations"
-msgstr "User %s not authorised to create organisations"
+msgstr "User %s not authorised to create publishers"
 
 #: ckan/logic/auth/create.py:145
 msgid "User {user} not authorized to create users via the API"
@@ -2233,12 +2233,12 @@ msgstr "User %s not authorised to delete group %s"
 #: ckan/logic/auth/delete.py:103
 #, python-format
 msgid "User %s not authorized to delete organizations"
-msgstr "User %s not authorised to delete organisations"
+msgstr "User %s not authorised to delete publishers"
 
 #: ckan/logic/auth/delete.py:107
 #, python-format
 msgid "User %s not authorized to delete organization %s"
-msgstr "User %s not authorised to delete organisation %s"
+msgstr "User %s not authorised to delete publisher %s"
 
 #: ckan/logic/auth/delete.py:120
 #, python-format
@@ -2291,7 +2291,7 @@ msgstr "User %s not authorised to change state of package %s"
 #: ckan/logic/auth/update.py:128
 #, python-format
 msgid "User %s not authorized to edit organization %s"
-msgstr "User %s not authorised to edit organisation %s"
+msgstr "User %s not authorised to edit publisher %s"
 
 #: ckan/logic/auth/update.py:145
 #, python-format
@@ -3224,7 +3224,7 @@ msgid ""
 "datasets from groups</p> "
 msgstr ""
 " <p><strong>Admin:</strong> Can edit group information, as well as manage "
-"organisation members.</p> <p><strong>Member:</strong> Can add/remove "
+"publisher members.</p> <p><strong>Member:</strong> Can add/remove "
 "datasets from groups</p> "
 
 #: ckan/templates/group/new.html:3 ckan/templates/group/new.html:5
@@ -3387,7 +3387,7 @@ msgstr ""
 "accessible and usable – by providing tools to streamline publishing, "
 "sharing, finding and using data (including storage of data and provision of "
 "robust data APIs). CKAN is aimed at data publishers (national and regional "
-"governments, companies and organisations) wanting to make their data open "
+"governments, companies and publishers) wanting to make their data open "
 "and available.</p> <p>CKAN is used by governments and user groups worldwide "
 "and powers a variety of official and community data portals including "
 "portals for local, national and international government, such as the UK’s "
@@ -3447,7 +3447,7 @@ msgstr "datasets"
 
 #: ckan/templates/home/snippets/stats.html:17
 msgid "organizations"
-msgstr "organisations"
+msgstr "publishers"
 
 #: ckan/templates/home/snippets/stats.html:23
 msgid "groups"
@@ -3494,7 +3494,7 @@ msgstr "Clear Upload"
 
 #: ckan/templates/organization/base_form_page.html:5
 msgid "Organization Form"
-msgstr "Organisation Form"
+msgstr "Publisher Form"
 
 #: ckan/templates/organization/bulk_process.html:3
 #: ckan/templates/organization/bulk_process.html:11
@@ -3534,30 +3534,30 @@ msgstr "Private"
 
 #: ckan/templates/organization/bulk_process.html:88
 msgid "This organization has no datasets associated to it"
-msgstr "This organisation has no datasets associated to it"
+msgstr "This publisher has no datasets associated to it"
 
 #: ckan/templates/organization/confirm_delete.html:11
 msgid "Are you sure you want to delete organization - {name}?"
-msgstr "Are you sure you want to delete organisation - {name}?"
+msgstr "Are you sure you want to delete publisher - {name}?"
 
 #: ckan/templates/organization/edit.html:6
 #: ckan/templates/organization/snippets/info.html:13
 #: ckan/templates/organization/snippets/info.html:16
 msgid "Edit Organization"
-msgstr "Edit Organisation"
+msgstr "Edit Publisher"
 
 #: ckan/templates/organization/index.html:13
 #: ckan/templates/user/dashboard_organizations.html:7
 msgid "Add Organization"
-msgstr "Add Organisation"
+msgstr "Add Publisher"
 
 #: ckan/templates/organization/index.html:20
 msgid "Search organizations..."
-msgstr "Search organisations..."
+msgstr "Search publishers..."
 
 #: ckan/templates/organization/index.html:29
 msgid "There are currently no organizations for this site"
-msgstr "There are currently no organisations for this site"
+msgstr "There are currently no publishers for this site"
 
 #: ckan/templates/organization/member_new.html:31
 #: ckan/templates/user/edit_user_form.html:8
@@ -3587,9 +3587,9 @@ msgid ""
 "but not add new datasets.</p> "
 msgstr ""
 " <p><strong>Admin:</strong> Can add/edit and delete datasets, as well as "
-"manage organisation members.</p> <p><strong>Editor:</strong> Can add and "
-"edit datasets, but not manage organisation members.</p> "
-"<p><strong>Member:</strong> Can view the organisation's private datasets, "
+"manage publisher members.</p> <p><strong>Editor:</strong> Can add and "
+"edit datasets, but not manage publisher members.</p> "
+"<p><strong>Member:</strong> Can view the publisher's private datasets, "
 "but not add new datasets.</p> "
 
 #: ckan/templates/organization/members.html:14
@@ -3603,24 +3603,24 @@ msgstr[1] "{count} members"
 #: ckan/templates/organization/new.html:7
 #: ckan/templates/organization/new.html:12
 msgid "Create an Organization"
-msgstr "Create an Organisation"
+msgstr "Create a Publisher"
 
 #: ckan/templates/organization/new_organization_form.html:17
 msgid "Update Organization"
-msgstr "Update Organisation"
+msgstr "Update Publisher"
 
 #: ckan/templates/organization/new_organization_form.html:19
 msgid "Create Organization"
-msgstr "Create Organisation"
+msgstr "Create Publisher"
 
 #: ckan/templates/organization/snippets/feeds.html:3
 msgid "Datasets in organization: {group}"
-msgstr "Datasets in organisation: {group}"
+msgstr "Datasets in publisher: {group}"
 
 #: ckan/templates/organization/snippets/help.html:4
 #: ckan/templates/organization/snippets/helper.html:4
 msgid "What are Organizations?"
-msgstr "What are Organisations?"
+msgstr "What are Publishers?"
 
 #: ckan/templates/organization/snippets/help.html:7
 msgid ""
@@ -3629,14 +3629,14 @@ msgid ""
 " belong to a department instead of an individual user.</p> <p>Within "
 "organizations, admins can assign roles and authorise its members, giving "
 "individual users the right to publish datasets from that particular "
-"organisation (e.g. Office of National Statistics).</p> "
+"publisher (e.g. Office of National Statistics).</p> "
 msgstr ""
-" <p>Organisations act like publishing departments for datasets (for example,"
+" <p>Publishers act like publishing departments for datasets (for example,"
 " the Department of Health). This means that datasets can be published by and"
 " belong to a department instead of an individual user.</p> <p>Within "
-"organisations, admins can assign roles and authorise its members, giving "
+"publishers, admins can assign roles and authorise its members, giving "
 "individual users the right to publish datasets from that particular "
-"organisation (e.g. Office of National Statistics).</p> "
+"publisher (e.g. Office of National Statistics).</p> "
 
 #: ckan/templates/organization/snippets/helper.html:8
 msgid ""
@@ -3644,21 +3644,21 @@ msgid ""
 "datasets. Users can have different roles within an Organization, depending "
 "on their level of authorisation to create, edit and publish. "
 msgstr ""
-" CKAN Organisations are used to create, manage and publish collections of "
-"datasets. Users can have different roles within an Organisation, depending "
+" CKAN Publishers are used to create, manage and publish collections of "
+"datasets. Users can have different roles within a Publisher, depending "
 "on their level of authorisation to create, edit and publish. "
 
 #: ckan/templates/organization/snippets/organization_form.html:10
 msgid "My Organization"
-msgstr "My Organisation"
+msgstr "My Publisher"
 
 #: ckan/templates/organization/snippets/organization_form.html:18
 msgid "my-organization"
-msgstr "my-organisation"
+msgstr "my-publisher"
 
 #: ckan/templates/organization/snippets/organization_form.html:20
 msgid "A little information about my organization..."
-msgstr "A little information about my organisation..."
+msgstr "A little information about my publisher..."
 
 #: ckan/templates/organization/snippets/organization_form.html:38
 msgid ""
@@ -3668,7 +3668,7 @@ msgstr ""
 
 #: ckan/templates/organization/snippets/organization_form.html:41
 msgid "Save Organization"
-msgstr "Save Organisation"
+msgstr "Save Publisher"
 
 #: ckan/templates/organization/snippets/organization_item.html:42
 #: ckan/templates/organization/snippets/organization_item.html:43
@@ -4018,22 +4018,22 @@ msgstr "Last Updated"
 
 #: ckan/templates/package/snippets/cannot_create_package.html:10
 msgid "Before you can create a dataset you need to create an organization."
-msgstr "Before you can create a dataset you need to create an organisation."
+msgstr "Before you can create a dataset you need to create a publisher."
 
 #: ckan/templates/package/snippets/cannot_create_package.html:13
 msgid "Create a new organization"
-msgstr "Create a new organisation"
+msgstr "Create a new publisher"
 
 #: ckan/templates/package/snippets/cannot_create_package.html:18
 msgid "There are no organizations to which you can assign this dataset."
-msgstr "There are no organisations to which you can assign this dataset."
+msgstr "There are no publishers to which you can assign this dataset."
 
 #: ckan/templates/package/snippets/cannot_create_package.html:19
 msgid ""
 "Ask a system administrator to create an organization before you can "
 "continue."
 msgstr ""
-"Ask a system administrator to create an organisation before you can "
+"Ask a system administrator to create a publisher before you can "
 "continue."
 
 #: ckan/templates/package/snippets/package_basic_fields.html:4
@@ -4068,11 +4068,11 @@ msgstr ""
 #: ckan/templates/package/snippets/package_basic_fields.html:76
 #: ckan/templates/snippets/organization.html:23
 msgid "Organization"
-msgstr "Organisation"
+msgstr "Publisher"
 
 #: ckan/templates/package/snippets/package_basic_fields.html:80
 msgid "No organization"
-msgstr "No organisation"
+msgstr "No publisher"
 
 #: ckan/templates/package/snippets/package_basic_fields.html:95
 msgid "Visibility"
@@ -4397,7 +4397,7 @@ msgstr "This dataset satisfies the Open Definition."
 
 #: ckan/templates/snippets/organization.html:48
 msgid "There is no description for this organization"
-msgstr "There is no description for this organisation"
+msgstr "There is no description for this publisher"
 
 #: ckan/templates/snippets/package_item.html:57
 msgid "This dataset has no description"
@@ -4469,21 +4469,21 @@ msgstr "No groups found"
 msgid "{number} organization found for \"{query}\""
 msgid_plural "{number} organizations found for \"{query}\""
 msgstr[0] "{number} organization found for \"{query}\""
-msgstr[1] "{number} organisations found for \"{query}\""
+msgstr[1] "{number} publishers found for \"{query}\""
 
 #: ckan/templates/snippets/search_result_text.html:28
 msgid "No organizations found for \"{query}\""
-msgstr "No organisations found for \"{query}\""
+msgstr "No publishers found for \"{query}\""
 
 #: ckan/templates/snippets/search_result_text.html:29
 msgid "{number} organization found"
 msgid_plural "{number} organizations found"
-msgstr[0] "{number} organization found"
-msgstr[1] "{number} organisations found"
+msgstr[0] "{number} publisher found"
+msgstr[1] "{number} publishers found"
 
 #: ckan/templates/snippets/search_result_text.html:30
 msgid "No organizations found"
-msgstr "No organisations found"
+msgstr "No publishers found"
 
 #: ckan/templates/snippets/social.html:5
 msgid "Social"
@@ -4525,7 +4525,7 @@ msgstr "My Datasets"
 #: ckan/templates/user/dashboard.html:21
 #: ckan/templates/user/dashboard_organizations.html:12
 msgid "My Organizations"
-msgstr "My Organisations"
+msgstr "My Publishers"
 
 #: ckan/templates/user/dashboard.html:22
 #: ckan/templates/user/dashboard_groups.html:12
@@ -4554,7 +4554,7 @@ msgstr "You are not a member of any groups."
 
 #: ckan/templates/user/dashboard_organizations.html:21
 msgid "You are not a member of any organizations."
-msgstr "You are not a member of any organisations."
+msgstr "You are not a member of any publishers."
 
 #: ckan/templates/user/edit.html:6 ckan/templates/user/edit_base.html:3
 #: ckan/templates/user/list.html:6 ckan/templates/user/list.html:13
