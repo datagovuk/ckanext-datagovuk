@@ -3406,16 +3406,12 @@ msgid "Welcome to CKAN"
 msgstr "Welcome to Data publisher"
 
 #: ckan/templates/home/snippets/promoted.html:10
-msgid ""
-"This is a nice introductory paragraph about CKAN or the site in general. We "
-"don't have any copy to go here yet but soon we will "
-msgstr ""
-"This is a nice introductory paragraph about Data publisher or the site in general. We "
-"don't have any copy to go here yet but soon we will "
+msgid "Publish and update data for your organisation"
+msgstr "Publish and update data for your organisation"
 
 #: ckan/templates/home/snippets/promoted.html:19
-msgid "This is a featured section"
-msgstr "This is a featured section"
+msgid "If you already have an account, sign in to publish a new dataset or update an existing one."
+msgstr "If you already have an account, sign in to publish a new dataset or update an existing one."
 
 #: ckan/templates/home/snippets/search.html:2
 msgid "E.g. environment"
