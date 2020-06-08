@@ -4212,7 +4212,7 @@ msgstr "A resource can be any file or link to a file containing useful data."
 
 #: ckan/templates/package/snippets/resource_item.html:23
 msgid "Explore"
-msgstr "Explore"
+msgstr "More"
 
 #: ckan/templates/package/snippets/resource_item.html:35
 msgid "More information"
