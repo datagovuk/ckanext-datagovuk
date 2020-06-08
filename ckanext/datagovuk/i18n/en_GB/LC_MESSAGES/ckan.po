@@ -4707,15 +4707,15 @@ msgstr "Registration"
 
 #: ckan/templates/user/new.html:14
 msgid "Register for an Account"
-msgstr "Register for an Account"
+msgstr "Register for an account"
 
 #: ckan/templates/user/new.html:26
 msgid "Why Sign Up?"
-msgstr "Why Sign Up?"
+msgstr "Getting started"
 
 #: ckan/templates/user/new.html:28
 msgid "Create datasets, groups and other exciting things"
-msgstr "Create datasets, groups and other exciting things"
+msgstr "To publish data, you must set up a Data publisher account."
 
 #: ckan/templates/user/new_user_form.html:5
 msgid "username"
