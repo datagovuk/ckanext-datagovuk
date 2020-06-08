@@ -1375,7 +1375,7 @@ msgstr "Invalid reset key. Please try again."
 
 #: ckan/controllers/user.py:544 ckan/views/user.py:613
 msgid "Your password has been reset."
-msgstr "Your password has been reset."
+msgstr "Your password has been reset, you can now sign in."
 
 #: ckan/controllers/user.py:566
 msgid "Your password must be 4 characters or longer."
