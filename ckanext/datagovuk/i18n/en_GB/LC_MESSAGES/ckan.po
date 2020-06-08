@@ -155,7 +155,7 @@ msgstr "User {0} not authorised to update resource {1}"
 #: ckanext/datastore/templates-bs2/ajax_snippets/api_info.html:19
 #: ckanext/datastore/templates/ajax_snippets/api_info.html:21
 msgid "CKAN Data API"
-msgstr "CKAN Data API"
+msgstr "data.gov.uk Data API"
 
 #: ckanext/datastore/templates-bs2/ajax_snippets/api_info.html:23
 #: ckanext/datastore/templates/ajax_snippets/api_info.html:25
@@ -451,7 +451,7 @@ msgstr "0 Datasets"
 
 #: ckanext/example_theme_docs/v12_extra_public_dir/templates/home/snippets/promoted.html:4
 msgid "CKAN's data previewing tool has many powerful features"
-msgstr "CKAN's data previewing tool has many powerful features"
+msgstr "data.gov.uk's data previewing tool has many powerful features"
 
 #: ckan/templates/group/followers.html:3 ckan/templates/group/followers.html:6
 #: ckan/templates/group/snippets/info.html:32
@@ -1046,11 +1046,11 @@ msgstr "Select two revisions before doing the comparison."
 
 #: ckan/controllers/group.py:786
 msgid "CKAN Group Revision History"
-msgstr "CKAN Group Revision History"
+msgstr "data.gov.uk Group Revision History"
 
 #: ckan/controllers/group.py:790
 msgid "Recent changes to CKAN Group: "
-msgstr "Recent changes to CKAN Group: "
+msgstr "Recent changes to data.gov.uk Group: "
 
 #: ckan/controllers/group.py:811 ckan/controllers/package.py:487
 msgid "Log message: "
@@ -1126,11 +1126,11 @@ msgstr "Unauthorised to read package %s"
 
 #: ckan/controllers/package.py:463
 msgid "CKAN Dataset Revision History"
-msgstr "CKAN Dataset Revision History"
+msgstr "data.gov.uk Dataset Revision History"
 
 #: ckan/controllers/package.py:466
 msgid "Recent changes to CKAN Dataset: "
-msgstr "Recent changes to CKAN Dataset: "
+msgstr "Recent changes to data.gov.uk Dataset: "
 
 #: ckan/controllers/package.py:522
 msgid "Unauthorized to create a package"
@@ -1235,11 +1235,11 @@ msgstr "No preview has been defined."
 
 #: ckan/controllers/revision.py:45
 msgid "CKAN Repository Revision History"
-msgstr "CKAN Repository Revision History"
+msgstr "data.gov.uk Repository Revision History"
 
 #: ckan/controllers/revision.py:47
 msgid "Recent changes to the CKAN repository."
-msgstr "Recent changes to the CKAN repository."
+msgstr "Recent changes to the data.gov.uk repository."
 
 #: ckan/controllers/revision.py:111
 #, python-format
@@ -2754,7 +2754,7 @@ msgstr "About {0}"
 
 #: ckan/templates/footer.html:15
 msgid "CKAN API"
-msgstr "CKAN API"
+msgstr "data.gov.uk API"
 
 #: ckan/templates/footer.html:16
 msgid "CKAN Association"
@@ -2885,7 +2885,7 @@ msgstr "Update Config"
 
 #: ckan/templates/admin/config.html:45
 msgid "CKAN config options"
-msgstr "CKAN config options"
+msgstr "data.gov.uk config options"
 
 #: ckan/templates/admin/config.html:52
 #, python-format
@@ -2929,7 +2929,7 @@ msgstr "Confirm Reset"
 
 #: ckan/templates/admin/index.html:15
 msgid "Administer CKAN"
-msgstr "Administer CKAN"
+msgstr "Administer data.gov.uk"
 
 #: ckan/templates/admin/index.html:20
 #, python-format
@@ -3300,7 +3300,7 @@ msgid ""
 "particular theme, or as a very simple way to help people find and search "
 "your own published datasets. "
 msgstr ""
-"You can use CKAN Groups to create and manage collections of datasets. This "
+"You can use data.gov.uk Groups to create and manage collections of datasets. This "
 "could be to catalogue datasets for a particular project or team, or on a "
 "particular theme, or as a very simple way to help people find and search "
 "your own published datasets. "
@@ -3403,14 +3403,14 @@ msgstr ""
 
 #: ckan/templates/home/snippets/promoted.html:8
 msgid "Welcome to CKAN"
-msgstr "Welcome to CKAN"
+msgstr "Welcome to Data publisher"
 
 #: ckan/templates/home/snippets/promoted.html:10
 msgid ""
 "This is a nice introductory paragraph about CKAN or the site in general. We "
 "don't have any copy to go here yet but soon we will "
 msgstr ""
-"This is a nice introductory paragraph about CKAN or the site in general. We "
+"This is a nice introductory paragraph about Data publisher or the site in general. We "
 "don't have any copy to go here yet but soon we will "
 
 #: ckan/templates/home/snippets/promoted.html:19
@@ -3644,7 +3644,7 @@ msgid ""
 "datasets. Users can have different roles within an Organization, depending "
 "on their level of authorisation to create, edit and publish. "
 msgstr ""
-" CKAN Publishers are used to create, manage and publish collections of "
+" data.gov.uk Publishers are used to create, manage and publish collections of "
 "datasets. Users can have different roles within a Publisher, depending "
 "on their level of authorisation to create, edit and publish. "
 
@@ -3690,7 +3690,7 @@ msgid ""
 "with a description and other information, at a fixed URL. Datasets are what "
 "users see when searching for data. "
 msgstr ""
-" A CKAN Dataset is a collection of data resources (such as files), together "
+" A data.gov.uk Dataset is a collection of data resources (such as files), together "
 "with a description and other information, at a fixed URL. Datasets are what "
 "users see when searching for data. "
 
@@ -4571,7 +4571,7 @@ msgstr "Account Info"
 msgid ""
 " Your profile lets other CKAN users know about who you are and what you do. "
 msgstr ""
-" Your profile lets other CKAN users know about who you are and what you do. "
+" Your profile lets other data.gov.uk users know about who you are and what you do. "
 
 #: ckan/templates/user/edit_user_form.html:7
 msgid "Change details"
