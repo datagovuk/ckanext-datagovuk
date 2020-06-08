@@ -4790,19 +4790,18 @@ msgstr "Reset your password"
 
 #: ckan/templates/user/request_reset.html:6
 msgid "Password reset"
-msgstr "Password reset"
+msgstr "Reset your password"
 
 #: ckan/templates/user/request_reset.html:19
 msgid "Request reset"
-msgstr "Request reset"
+msgstr "Send"
 
 #: ckan/templates/user/request_reset.html:34
 msgid ""
 "Enter your username into the box and we will send you an email with a link "
 "to enter a new password."
 msgstr ""
-"Enter your username into the box and we will send you an email with a link "
-"to enter a new password."
+"Enter your registered details and we'll send you a link to set a new password."
 
 #: ckan/templates/user/snippets/followee_dropdown.html:15
 #: ckan/templates/user/snippets/followee_dropdown.html:16
