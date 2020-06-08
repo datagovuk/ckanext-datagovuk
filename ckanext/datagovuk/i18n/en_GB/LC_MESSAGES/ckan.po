@@ -3413,6 +3413,15 @@ msgstr "Publish and update data for your organisation"
 msgid "If you already have an account, sign in to publish a new dataset or update an existing one."
 msgstr "If you already have an account, sign in to publish a new dataset or update an existing one."
 
+msgid "Contact the data.gov.uk team"
+msgstr "Contact the data.gov.uk team"
+
+msgid "data.gov.uk is built by Government Digital Service"
+msgstr "data.gov.uk is built by Government Digital Service"
+
+msgid "Contact support"
+msgstr "Contact support"
+
 #: ckan/templates/home/snippets/search.html:2
 msgid "E.g. environment"
 msgstr "E.g. environment"
