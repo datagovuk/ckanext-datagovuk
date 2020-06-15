@@ -6,6 +6,7 @@ venv/bin/pip install -r venv/src/ckan/dev-requirements.txt
 venv/bin/pip install -r dev-requirements.txt
 dropdb ckan_test; createdb ckan_test
 venv/bin/python setup.py develop
+echo $PATH
 paster --plugin=ckan db init -c test-jenkins.ini
 paster --plugin=ckanext-harvest harvester initdb -c test-jenkins.ini
 
