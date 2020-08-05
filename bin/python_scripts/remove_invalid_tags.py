@@ -57,7 +57,7 @@ def remove_invalid_tags(live=False):
 
     try:
         cursor = connection.cursor()
-        with io.open("invalid_tags_data.csv", "r", encoding="utf-8") as f:
+        with io.open("invalid_tags_data.csv", "rb") as f:
             reader = csv.DictReader(f)
             for row in reader:
                 if row['tag_id'] in invalid_tags:
