@@ -98,9 +98,9 @@ class CreateDGUTestDataCommand(CkanCommand):
         if not publisher:
             print('=== Creating example publisher 1')
             model.Session.flush()
-            rev = model.repo.new_revision()
-            rev.author = u"DGU test admin"
-            rev.message = u"Creating Example Publisher #1."
+            # rev = model.repo.new_revision()
+            # rev.author = u"DGU test admin"
+            # rev.message = u"Creating Example Publisher #1."
 
             publisher = model.Group(
                 name=u"example-publisher-1",
@@ -111,9 +111,9 @@ class CreateDGUTestDataCommand(CkanCommand):
             model.Session.add(publisher)
             model.repo.commit_and_remove()
 
-            rev = model.repo.new_revision()
-            rev.author = u"DGU test admin"
-            rev.message = u"Adding charity-ngo category for example publisher 1."
+            # rev = model.repo.new_revision()
+            # rev.author = u"DGU test admin"
+            # rev.message = u"Adding charity-ngo category for example publisher 1."
 
             category = model.GroupExtra(group_id=publisher.id, key="category", value="charity-ngo")
             model.Session.add(category)
@@ -165,9 +165,9 @@ class CreateDGUTestDataCommand(CkanCommand):
                 model.Session.flush()
 
                 print("=== Updating the example dataset to be in line with how DGU processes it")
-                rev = model.repo.new_revision()
-                rev.author = u"DGU test admin"
-                rev.message = u"Updating example-data-number-one for CKAN functional tests"
+                # rev = model.repo.new_revision()
+                # rev.author = u"DGU test admin"
+                # rev.message = u"Updating example-data-number-one for CKAN functional tests"
 
                 dataset = model.Package.get("example-dataset-number-one")
 
@@ -204,16 +204,16 @@ class CreateDGUTestDataCommand(CkanCommand):
                 model.repo.commit_and_remove()
 
                 print("=== Running search index rebuild")
-                command = 'paster --plugin=ckan search-index rebuild %s -c $CKAN_INI' % dataset.name
+                command = 'ckan search-index rebuild %s -c $CKAN_INI' % dataset.name
                 run_command(command)
 
         publisher2 = model.Group.get('Example Publisher #2')
         if not publisher2:
             print('=== Creating example publisher 2')
             model.Session.flush()
-            rev = model.repo.new_revision()
-            rev.author = u"DGU test admin"
-            rev.message = u'''Creating Example Publisher #2.'''
+            # rev = model.repo.new_revision()
+            # rev.author = u"DGU test admin"
+            # rev.message = u'''Creating Example Publisher #2.'''
 
             publisher2 = model.Group(
                 name=u"example-publisher-2",
@@ -281,10 +281,10 @@ class RemoveDGUTestDataCommand(CkanCommand):
         model.Session.execute(sql, {"testadmin_name": os.environ.get('CKAN_TEST_SYSADMIN_NAME')})
         model.repo.commit_and_remove()
 
-        command = 'paster --plugin=ckan search-index clear example-publisher-1 -c $CKAN_INI'
+        command = 'ckan search-index clear example-publisher-1 -c $CKAN_INI'
         run_command(command)
 
-        command = 'paster --plugin=ckan search-index clear example-publisher-2 -c $CKAN_INI'
+        command = 'ckan search-index clear example-publisher-2 -c $CKAN_INI'
         run_command(command)
 
         print("====== DGU test data removed")
