@@ -127,7 +127,7 @@ class CreateDGUTestDataCommand(CkanCommand):
                 if '5001' in config.get('ckan.site_url'):
                     version = '-2.8'
                 elif '5002' in config.get('ckan.site_url'):
-                    verions = '-2.9'
+                    version = '-2.9'
 
             source_dict = {
                 'title': 'Example Harvest #1',
@@ -204,7 +204,7 @@ class CreateDGUTestDataCommand(CkanCommand):
                 model.repo.commit_and_remove()
 
                 print("=== Running search index rebuild")
-                command = 'ckan search-index rebuild %s -c $CKAN_INI' % dataset.name
+                command = 'ckan search-index rebuild %s' % dataset.name
                 run_command(command)
 
         publisher2 = model.Group.get('Example Publisher #2')
@@ -281,10 +281,10 @@ class RemoveDGUTestDataCommand(CkanCommand):
         model.Session.execute(sql, {"testadmin_name": os.environ.get('CKAN_TEST_SYSADMIN_NAME')})
         model.repo.commit_and_remove()
 
-        command = 'ckan search-index clear example-publisher-1 -c $CKAN_INI'
+        command = 'ckan search-index clear example-publisher-1'
         run_command(command)
 
-        command = 'ckan search-index clear example-publisher-2 -c $CKAN_INI'
+        command = 'ckan search-index clear example-publisher-2'
         run_command(command)
 
         print("====== DGU test data removed")
