@@ -115,6 +115,10 @@ class DatagovukPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, Defau
         # as there may be better ways to resolve this issue
         schema['harvest'] = {'_': ignore}
 
+        print('**** DGU plugin')
+        logger = logging.getLogger(__name__)
+        logger.debug('**** DGU plugin')
+
         return schema
 
     def create_package_schema(self):
@@ -212,6 +216,13 @@ class DatagovukPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, Defau
     # IBlueprint
 
     def get_blueprint(self):
+        logger = logging.getLogger('ckanext.datagovuk')
+        logger.debug('**** get blueprint')
+
+        logger2 = logging.getLogger(__name__)
+        logger2.debug('**** get blueprint2')
+        print('*** DGU blueprint2', logger2.__dict__)
+
         from ckanext.datagovuk.views.dataset import dataset_search
         from ckanext.datagovuk.views.healthcheck import healthcheck
         from ckanext.datagovuk.views.accessibility import accessibility

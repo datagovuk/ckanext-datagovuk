@@ -10,12 +10,12 @@ PII_LIST = [
 
 
 def remove_pii_from_api_search_dataset(json_data, json_dumps=True):
+    # import pdb; pdb.set_trace()
     if isinstance(json_data, str):
         try:
             json_data = json.loads(json_data)
         except:
             return
-
     new_json_data = copy.deepcopy(json_data)
     if 'results' in json_data.keys():
         for i in range(len(json_data['results'])):
