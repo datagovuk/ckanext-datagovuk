@@ -38,7 +38,6 @@ class PublisherForm(plugins.SingletonPlugin, toolkit.DefaultOrganizationForm):
         schema['display_name'] = []
         schema['package_count'] = [toolkit.get_validator('ignore_missing')]
         schema['packages'] = {'__extras': [toolkit.get_validator('keep_extras')]}
-        schema['revision_id'] = []
         schema['state'] = []
         schema['users'] = {'__extras': [toolkit.get_validator('keep_extras')]}
         return schema
