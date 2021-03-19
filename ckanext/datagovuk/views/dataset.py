@@ -5,7 +5,7 @@ from ckanext.datagovuk.pii_helpers import remove_pii_from_api_search_dataset
 def dataset_search(ver=1):
     data = action('package_search', ver=ver)
     return remove_pii_from_api_search_dataset(
-        data.json['result'] if ver == 1 else data.json
+        data.json.get('result') if ver == 1 else data.json
     )
 
 
