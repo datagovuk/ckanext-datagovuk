@@ -4,7 +4,7 @@ blinker==1.4
 boto3==1.15.1
 gunicorn
 lxml>=2.3
-numpy==1.16.4
+numpy==1.20.2
 pandas==0.24.2
 psycopg2==2.8.6
 Shapely>=1.2.13
