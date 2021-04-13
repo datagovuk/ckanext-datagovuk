@@ -5,7 +5,7 @@ boto3==1.15.1
 gunicorn
 lxml>=2.3
 numpy==1.16.4
-pandas==0.24.2
+pandas==1.2.4
 psycopg2==2.8.6
 Shapely>=1.2.13
 sentry-sdk==0.17.6
