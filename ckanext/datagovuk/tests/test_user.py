@@ -282,11 +282,11 @@ class TestRequestPasswordReset(helpers.FunctionalTestBase, DBTest):
         response = app.post(
             url=url_for("user.request_reset"),
             params={u"user": u"foo@example.com"},
-            status=200,
         )
-
-        self.assertIn("Could not send reset link", response.body)
         self.assertTrue(mock_mail_user.called)
+
+        response = response.follow()
+        self.assertIn("Error sending the email", response.body)
 
 
 class TestPerformPasswordReset(helpers.FunctionalTestBase, DBTest):
