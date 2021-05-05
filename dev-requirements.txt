@@ -1,2 +1,2 @@
 nose-randomly==1.2.6
-pytest==4.6.9
+pytest==6.2.4
