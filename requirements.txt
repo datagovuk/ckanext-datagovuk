@@ -8,6 +8,6 @@ numpy==1.16.4
 pandas==0.24.2
 psycopg2==2.8.6
 Shapely>=1.2.13
-sentry-sdk==0.17.6
+sentry-sdk==1.1.0
 six==1.15.0
 xlrd==1.2.0
