@@ -1,7 +1,7 @@
 awesome-slugify==1.6.5
 beautifulsoup4==4.9.3
 blinker==1.4
-boto3==1.15.1
+boto3==1.17.68
 gunicorn
 lxml>=2.3
 numpy==1.16.4
